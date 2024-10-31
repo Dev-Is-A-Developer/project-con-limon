@@ -1,0 +1,134 @@
+/* ---------------------------------
+COMING SOON CSS
+- Body (ajustes)
+- Intro pantalla animacion
+- Main: coming soon (lateral scroll)
+--------------------------------- */
+
+/* BODY
+Ajustes para el body del sitio web
+*/
+body {
+    overflow: hidden;
+    background-color: var(--whiteYellow);
+}
+
+/* INTRO ANIMACION
+Estilos para el intro despues de cargar la pagina que desaparece para ver la pagina abajo
+Estructura:
+- contenedor
+- texto
+- palabras del texto
+*/
+
+/* INTRO ANIMACION contenedor */
+.capaIntro {
+    background-color: var(--whiteYellow);
+    position: fixed;
+    z-index: 3;  /* para cubrir todo estando encima */
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+/* INTRO ANIMACION texto */
+.capaIntro__texto {
+    position: absolute;
+    font-family: 'Zodiak';
+}
+
+/* INTRO ANIMACION texto palabras */
+.capaIntro__textoPalabra {
+    font-size: 3rem;
+    color: var(--darkYellow);
+    position: relative;
+    display: inline-block;
+    padding: 0.2rem;
+    bottom: -50px;
+    opacity: 0;
+}
+
+/* texto palabras al entrar en la página */ 
+.capaIntro__textoPalabra.entrada {
+    font-size: 3rem;
+    bottom: 0;
+    opacity: 1;
+    transition: 0.5s ease;
+}
+
+/* texto palabras al salir de la página */ 
+.capaIntro__textoPalabra.salida {
+    font-size: 2.75rem;
+    bottom: 150px;
+    opacity: 0;
+    transition: 0.5s ease-in;
+}
+
+/* SECCION COMING SOON 
+Estilos para la seccion de mostrar eventos que vendrán pronto.
+Estructura:
+- seccion
+- contenedores
+- texto
+*/
+
+.scroll {
+    font-family: "Satoshi";
+    overflow-x: scroll;
+    display: flex;
+}
+
+.scroll__seccion {
+    min-width: 100vw;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.scroll__titulo {
+    margin: 0 0 3rem; 
+}
+
+.titulo1 {
+    color: var(--lightRed);
+}
+
+.titulo2 {
+    color: var(--lightOrange);
+}
+
+.titulo3 {
+    color: var(--mediumGreen);
+}
+
+.titulo4 {
+    color: var(--mediumYellow);
+}
+
+.scrollInstrucciones {
+    font-family: "Necto";
+    position: fixed;
+    text-align: center;
+    font-size: small;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+}
+
+/* Al estar menos de 550px la anchura, la seccion se cambia de formato: */
+@media screen and (max-width: 550px) {
+
+    .scroll__seccion {
+        font-size: 1.5rem;
+    }
+
+}

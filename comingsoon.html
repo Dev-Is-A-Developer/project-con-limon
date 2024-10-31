@@ -1,0 +1,179 @@
+<!--
+COMING SOON (eventos)
+Descripción: Este archivo HTML contiene la página de "coming soon" de eventos, catering, etc del sitio web.
+Estructura general: Intro pantalla, encabezado con barra de navegación / versión responsive, contenido principal (main con 1 parte), pie de página
+-->
+
+<!DOCTYPE html>
+
+<html lang="es">
+   
+    <head>
+        <title>Coming Soon - Con Limón</title>
+        <meta name="title" content="Coming Soon - Con Limón">
+        <meta name="author" content="Devon García">
+        <meta name="description" content="Con Limón es una pastelería de tartas elaborado con sabor, vivacidad y sol para tu cuerpo y mente.">
+        <meta name="keywords" content="pasteleria, pasteleria cerca de mi, mejores pastelerias, reposteria, pasteles, tartas, tartas personalizadas">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="css/comingsoon.css">
+        <script src="script/comingsoon.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    </head>
+
+    <body>
+
+        <!-- CAPA INTRO
+        Descripción: Intro despues de cargar la pagina que desaparece para ver la pagina abajo
+        -->
+        <div class="capaIntro" id="capa">
+            <h1 class="capaIntro__texto">
+                <span class="capaIntro__textoPalabra">coming</span>
+                <span class="capaIntro__textoPalabra">soon</span>
+            </h1>
+        </div>
+        
+        <!--
+        HEADER RESPONSIVE
+        Descripción: Este header solo aparece en la versión responsive del web
+        -->
+        <nav class="headerResponsive" id="navegacion">
+        
+            <button type="button" class="headerResponsive__botonCierra" id="botonCierraCortina">&times;</button>
+            
+            <ul class="headerResponsive__lista">
+    
+                <li class="headerResponsive__elementoLista"><a href="index.html">Inicio</a></li>
+
+                <li class="headerResponsive__elementoLista"><a href="sobre.html">Nosotros</a></li>
+
+                <li class="headerResponsive__elementoLista"><a href="productos.html">Productos</a></li>
+
+                <li class="headerResponsive__elementoLista"><a href="comingsoon.html">Eventos</a></li>
+
+                <li class="headerResponsive__elementoLista"><a href="contacto.html">Contacto</a></li>
+
+                <li class="headerResponsive__elementoLista"><a href="carrito.html">Carrito</a></li>
+    
+            </ul>
+    
+        </nav>
+    
+        <!--
+        HEADER
+        Descripción: Este header es el encabezado con barra de navegación base del web
+        -->
+        <header class="header">
+
+            <!-- Logo -->
+            <h1 class="header__logo"><a href="index.html">con limón</a></h1>
+
+            <!-- Barra de navegación -->
+            <nav class="header__nav">
+
+                <ul class="header__lista">
+
+                    <li class="header__elementoLista"><a href="index.html">Inicio</a></li>
+
+                    <li class="header__elementoLista"><a href="sobre.html">Nosotros</a></li>
+
+                    <li class="header__elementoLista"><a href="productos.html">Productos</a></li>
+
+                    <li class="header__elementoLista"><a href="comingsoon.html">Eventos</a></li>
+
+                    <li class="header__elementoLista"><a href="contacto.html">Contacto</a></li>
+
+                    <li class="header__elementoLista"><a href="carrito.html">Carrito</a></li>
+
+                </ul>
+
+            </nav>
+
+            <!-- Boton de 3 barras de header responsive -->
+            <button type="button" class="header__responsiveButton" id="botonAbreCortina"><i class="fa-solid fa-bars"></i></button>
+            
+        </header>
+
+        <!--
+        MAIN
+        Descripción: El main contiene 1 sección con el efecto de scroll lateral 
+        -->
+        <main class="comingsoon">
+            
+            <section class="scroll">
+
+                <div class="scroll__seccion">
+                    <h2 class="scroll__titulo titulo1">Talleres</h2>
+                </div>
+        
+                <div class="scroll__seccion">
+                    <h2 class="scroll__titulo titulo2">Catering</h2>
+                </div>
+            
+                <div class="scroll__seccion">
+                    <h2 class="scroll__titulo titulo3">Suscripción</h2>
+                </div>
+            
+                <div class="scroll__seccion">
+                    <h2 class="scroll__titulo titulo4">Club Con Limón</h2>
+                </div>
+
+            </section>
+
+            <p class="scrollInstrucciones">scroll  <i class="fa-solid fa-arrow-down"></i></p>
+
+        </main>
+
+        <!--
+        FOOTER
+        Descripción: El footer está compuesto de dos partes:
+        1. Seccion arriba: la dirección, el correo electrónico, los enlaces del header, e información sobre la política y temas legales
+        2. Seccion abajo: copyright, redes sociales
+        -->
+        <footer class="footer">
+
+            <!-- Seccion de arriba -->
+            <div class="footer__seccionArriba">
+
+                    <ul class="footer__lista">
+                        <li class="footer__elementoLista">C/ Limonero 1, Sevilla</li>
+                        <li class="footer__elementoLista">info@conlimon.com</li>
+                    </ul>
+
+                    <ul class="footer__lista">
+                        <li class="footer__elementoLista elementoSlide"><a href="index.html">Inicio</a></li>
+                        <li class="footer__elementoLista elementoSlide"><a href="sobre.html">Nosotros</a></li>
+                        <li class="footer__elementoLista elementoSlide"><a href="productos.html">Productos</a></li>
+                        <li class="footer__elementoLista elementoSlide"><a href="contacto.html">Contacto</a></li>
+                    </ul>
+
+                    <ul class="footer__lista">
+                        <li class="footer__elementoLista elementoSlide"><a href="#">Términos y Condiciones</a></li>
+                        <li class="footer__elementoLista elementoSlide"><a href="#">Política de Privacidad</a></li>
+                        <li class="footer__elementoLista elementoSlide"><a href="#">Condiciones de Compra</a></li>
+                    </ul>
+
+            </div>
+
+            <!-- Barra para separar secciones -->
+            <div class="footer__linea"></div>
+
+            <!-- Seccion de abajo -->
+            <div class="footer__seccionAbajo">
+
+                <ul class="footer__listaRedes">
+                    <li class="footer__elementoListaRedes"><i class="fa fa-brands fa-instagram"></i> Instagram</li>
+                    <li class="footer__elementoListaRedes"><i class="fa fa-brands fa-tiktok"></i> Tiktok</li>
+                    <li class="footer__elementoListaRedes"><i class="fa fa-brands fa-facebook"></i> Facebook</li>
+                </ul>
+
+                <p class="footer__copyright"><i class="fa-regular fa-copyright"></i> 2024 Con Limón.</p>
+
+            </div>
+
+        </footer>
+
+    </body>
+
+</html>

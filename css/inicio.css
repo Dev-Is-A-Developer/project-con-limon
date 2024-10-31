@@ -1,0 +1,358 @@
+/* ---------------------------------
+INICIO CSS
+- Main: intro (animacion), productos destacados (slider), carousel de imagenes (carousel)
+--------------------------------- */
+
+/* SECCION INTRO
+Estilos para la seccion con animacion de texto
+Estructura:
+- intro div
+- frase (texto)
+- palabras de la frase
+- animacion
+*/
+
+/* SECCION INTRO intro div */
+.intro {
+    display: grid;
+    align-items: center; 
+    justify-content: center;   
+    text-align: center;
+    width: 100%;
+    height: 90vh;
+    background-color: var(--mediumGreen);
+}
+
+/* SECCION INTRO frase */
+.frase {
+    font-family: "Satoshi";
+    font-weight: 900;
+    font-size: 8.5vw;
+    text-transform: uppercase;
+}
+
+/* SECCION INTRO frase palabra */
+.frase__palabra {
+    animation: cambiarColor 4s linear infinite;
+}
+
+/* SECCION INTRO frase palabra 1 */
+.frase__palabra--1 {
+    --color-1: var(--whiteYellow);
+    --color-2: var(--lightGreen);
+    --color-3: var(--lightYellow);
+}
+
+/* SECCION INTRO frase palabra 2 */
+.frase__palabra--2 {
+    --color-1: var(--lightOrange);
+    --color-2: var(--lightYellow);
+    --color-3: var(--whiteYellow);
+}
+
+/* SECCION INTRO frase palabra 3 */
+.frase__palabra--3 {
+    --color-1: var(--mediumYellow);
+    --color-2: var(--whiteYellow);
+    --color-3: var(--lightGreen);
+}
+
+/* SECCION INTRO frase palabra 4 */
+.frase__palabra--4 {
+    --color-1: var(--lightGreen);
+    --color-2: var(--lightOrange);
+    --color-3: var(--mediumYellow);
+}
+
+/* SECCION INTRO frase palabra(s) 5 */
+.frase__palabra--5 {
+    --color-1: var(--lightYellow);
+    --color-2: var(--mediumYellow);
+    --color-3: var(--lightOrange);
+}
+  
+/* SECCION INTRO animacion de cambiar el color de cada frase de manera infinita */
+@keyframes cambiarColor {
+    0%    {color: var(--color-1)}
+    32%   {color: var(--color-1)}
+    33%   {color: var(--color-2)}
+    65%   {color: var(--color-2)}
+    66%   {color: var(--color-3)}
+    99%   {color: var(--color-3)}
+    100%  {color: var(--color-1)}
+}
+
+/* SECCION DESTACADOS
+Estilos para la seccion del slider con productos destacados
+Estructura:
+- contenedor
+- texto
+- slider
+- botones
+*/
+
+/* SECCION DESTACADOS contenedor */ 
+.destacados__contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    position: relative;
+    background-repeat: no-repeat;
+}
+
+/* SECCION DESTACADOS contenedor texto */ 
+.destacados__texto {
+    width: 30%;
+    padding: 0 1rem 0 2rem;
+}
+
+/* SECCION DESTACADOS texto parrafo */ 
+.destacados__texto p {
+    padding: 1rem 0;
+}
+
+/* SECCION DESTACADOS texto boton con enlace */ 
+.destacados__texto a {
+    font-family: 'Necto';
+    color: var(--black);
+    background-color: var(--lightYellow);
+    border: 1px dashed transparent;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+.destacados__texto a:hover {
+    cursor: pointer;
+    background-color: var(--whiteYellow);
+    border: 1px dashed var(--darkYellow);
+}
+
+/* SECCION DESTACADOS slider contenedor */ 
+.destacados__slider {
+    width: 70%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+/* SECCION DESTACADOS slider */ 
+.slider {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    list-style: none;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scrollbar-color: var(--white);
+    /* scrollbar-width: none;       esconder barra de scroll */
+}
+
+/* SECCION DESTACADOS slide */ 
+.slider__slide {
+    width: 100%;
+    height: 100%;
+}
+
+/* SECCION DESTACADOS flechas para cambiar de slide */ 
+.destacados__flecha {
+    height: 20%;
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin: 0;
+    color: var(--darkYellow);
+    background-color: transparent;
+    border: none;
+    border-radius: 1.2rem;
+    transition: color 0.25s;
+    cursor: pointer;
+}
+
+.destacados__flecha:hover {
+    color: var(--black);
+}
+
+/* Al estar menos de 992px la anchura, el slider se cambia de altura */
+@media screen and (max-width: 992px) {
+    .slider {
+        height: 60vh;
+    }
+}
+
+/* Al estar menos de 768px la anchura, la seccion (texto y slider) se cambia de formato */
+@media screen and (max-width: 768px) {
+
+    .destacados__contenedor {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .destacados__texto {
+        width: auto;
+        height: auto;
+        padding: 0 2rem;
+        font-size: small;
+    }
+
+    .destacados__texto h2 {
+        margin: 0 0 1rem;
+    }
+
+    .destacados__texto a {
+        font-size: smaller;
+    }
+
+    .destacados__slider {
+        width: 100%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+
+}
+/* Al estar menos de 480px la anchura, la seccion (texto y slider) se cambia de formato */
+@media screen and (max-width: 480px) {
+
+    .destacadosContenedor {
+        flex-direction: column;
+    }
+
+    .slider{
+        height: 50vh;
+    }
+
+    .destacados__flecha {
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+}
+
+/* SECCION CAROUSEL
+Estilos para la seccion del carousel de serie de productos con opcion de pausar o adelantar con flechas
+Estructura:
+- carousel
+- contenedor
+- imagen
+- botones
+*/
+
+/* SECCION CAROUSEL carousel seccion */
+.carousel {
+    background-color: var(--lightYellow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+/* SECCION CAROUSEL carousel contenedor */
+.carousel__contenedor {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+/* SECCION CAROUSEL imagen*/
+.carousel__imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* SECCION CAROUSEL flecha izquierda */
+.carousel__flechaIzquierda {
+    position: absolute;
+    left: 0;
+    bottom: 1rem;
+    font-size: 1.5rem;
+    font-family: 'Zodiak Light';
+    background-color: var(--white);
+    color: var(--mediumYellow);
+    border: 2px solid ;
+    border-color: transparent;
+    margin: 0 2rem;
+    opacity: 0.7;
+    transition: 1s opacity;
+}
+
+.carousel__flechaIzquierda:hover {
+    opacity: 1;
+    cursor: pointer;
+    border-color: var(--mediumYellow);
+}
+
+/* SECCION CAROUSEL flecha derecha */
+.carousel__flechaDerecha {
+    position: absolute;
+    right: 0;
+    bottom: 1rem;
+    font-size: 1.5rem;
+    font-family: 'Zodiak Light';
+    background-color: var(--white);
+    color: var(--mediumYellow);
+    border: 2px solid ;
+    border-color: transparent;
+    margin: 0 2rem;
+    opacity: 0.7;
+    transition: 1s opacity;
+}
+
+.carousel__flechaDerecha:hover {
+    opacity: 1;
+    cursor: pointer;
+    border-color: var(--mediumYellow);
+}
+
+/* SECCION CAROUSEL boton pausar */
+.carousel__botonPausar {
+    position: absolute;
+    justify-content: space-around;
+    align-items: center;
+    bottom: 1rem;
+    font-family: 'Necto';
+    font-size: 1rem;
+    background-color: var(--white);
+    color: var(--mediumYellow);
+    border: 2px solid ;
+    border-color: transparent;
+    padding: 0.5rem 1.5rem;
+    opacity: 0.7;
+    transition: 1s opacity;
+}
+
+.carousel__botonPausar:hover {
+    opacity: 1;
+    cursor: pointer;
+    border-color: var(--mediumYellow);
+}
+
+/* Al estar menos de 992px la anchura, el contenedor y sus flechas se cambian de formato */
+@media screen and (max-width: 992px) {
+
+    .carousel__contenedor {
+        width: 100%;
+    }
+
+    .carousel__flechaIzquierda {
+        font-size: 1.5rem;
+        margin: 0 1rem;
+    }
+
+    .carousel__flechaDerecha {
+        font-size: 1.5rem;
+        margin: 0 1rem;
+    }
+
+}

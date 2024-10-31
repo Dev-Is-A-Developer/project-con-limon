@@ -1,0 +1,81 @@
+/* ---------------------------------
+CONFIRMACION CSS
+- Main: confirmacion del pedido
+--------------------------------- */
+
+/* SECCION CONFIRMACION 
+Estilos para la confirmación del pedido de productos.
+Estructura:
+- seccion
+- contenedor
+- texto
+- boton de ver productos
+- imagen
+*/
+
+/* SECCION CONFIRMACION seccion */
+.confirmacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    text-align: center;
+}
+
+/* SECCION CONFIRMACION contenedor */
+.contenedorConfirmacion {
+    width: 30rem;
+    padding: 0 2rem;
+}
+
+/* SECCION CONFIRMACION texto heading */
+.contenedorConfirmacion h2 {
+    margin: 0 0 2rem 0;
+}
+
+/* SECCION CONFIRMACION texto */
+.contenedorConfirmacion h4 {
+    margin: 1rem 0;
+}
+
+/* SECCION CONFIRMACION boton ver productos */
+.contenedorConfirmacion__button {
+    display: inline-block;
+    font-family: 'Necto';
+    text-decoration: none;
+    color: var(--black);
+    background-color: var(--lightYellow);
+    border: 1px dashed transparent;
+    padding: 1rem;
+    margin: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.contenedorConfirmacion__button:hover {
+    cursor: pointer;
+    background-color: var(--mediumYellow);
+    border: 1px dashed var(--lightYellow);
+}
+
+/* SECCION CONFIRMACION imagen */
+.contenedorConfirmacion img {
+    width: 15rem;
+    height: auto;
+    margin-top: 1.5rem;
+}
+
+/* Al estar menos de 550px la anchura, la seccion se cambia de formato: */
+@media screen and (max-width: 550px) {
+
+    .contenedorConfirmacion {
+        width: 15rem;
+    }
+
+    .contenedorConfirmacion h2 {
+        font-size: 1.2rem;
+    }
+
+    .contenedorConfirmacion h4 {
+        font-size: small;
+    }
+}

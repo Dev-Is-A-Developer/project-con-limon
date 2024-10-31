@@ -1,0 +1,264 @@
+/* ---------------------------------
+CONTACTO CSS
+- Main: hero image, contacto (detalles, formulario, modal)
+--------------------------------- */
+
+/* SECCION HERO
+Estilos para la sección de la hero image.
+Estructura:
+- contenedor
+- titulo
+*/
+
+/* SECCION HERO contenedor */
+.hero__contenedor {
+    background-image: linear-gradient(rgba(221, 221, 221, 0.3), rgba(221, 221, 221, 0.3)), url(../images/tarta-melocoton-centered.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SECCION HERO titulo */
+.hero__titulo {
+    font-size: 2.75rem;
+    text-align: center;
+    color: var(--white);
+    animation: mostrarTitulo 2s ease;
+
+}
+
+/* SECCION HERO animacion para mostrar titulo */
+@keyframes mostrarTitulo {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    20% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+
+/* SECCION CONTACTO
+Estilos para la sección de contacto.
+Estructura:
+- seccion
+- titulo
+- contenedor
+- contenedor descripcion: texto de como contactar
+- contenedor form: nombre, apellido, email, tema, mensaje, boton de enviar
+- modal
+*/
+
+/* SECCION CONTACTO seccion */
+.contacto{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* SECCION CONTACTO contenedor */
+.contacto__contenedor {
+    width: 100%;
+    background-color: var(--white);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+}
+
+/* SECCION CONTACTO contenedor texto */
+.contacto__descripcion {
+    width: 100%;
+    padding: 0;
+}
+
+/* SECCION CONTACTO texto de contacto */
+.contacto__texto {
+    font-size: 1.15rem;
+    text-align: left;
+}
+
+.contacto__texto strong {
+    font-family: "Zodiak";
+    color: var(--mediumGreen);
+}
+
+.contacto__texto i{
+    font-size: 0.9rem;
+}
+
+/* SECCION CONTACTO formulario */
+.contacto__formulario {
+    border: 2px solid var(--mediumYellow);
+    border-radius: 0.2rem;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+/* SECCION CONTACTO contenedores form input*/
+.contacto__formularioInput {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Necto;
+    margin: 0.5rem 0;
+}
+
+/* SECCION CONTACTO checkboxes (tema) */
+.contacto__checkboxes {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 1rem 0;
+}
+
+/* SECCION CONTACTO textarea (mensaje) */
+.contacto__textarea {
+    font-family: Necto;
+    width: 85%;
+    margin: 0 0 1rem 0;
+    padding: 0.5rem;
+    align-self: center;
+    border: solid var(--mediumYellow);
+    resize: none;
+}
+
+/* SECCION CONTACTO boton enviar */
+.contacto__enviar {
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.6rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* SECCION CONTACTO input texto (nombre, apellidos) */
+input[type="text"] {
+    font-family: Necto;
+    width: 80%;
+    margin: 0 0 1rem 0;
+    padding: 0.5rem;
+    align-self: center;
+    border: solid var(--mediumYellow);
+}
+
+/* SECCION CONTACTO input email (email) */
+input[type="email"] {
+    font-family: Necto;
+    width: 80%;
+    margin: 0 0 1rem 0;
+    padding: 0.5rem;
+    align-self: center;
+    border: solid var(--mediumYellow);
+}
+
+/* SECCION CONTACTO input submit (boton enviar)*/
+input[type="submit"] {
+    font-family: Necto;
+    width: 35%;
+    margin: 0;
+    padding: 0.5rem;
+    align-self: center;
+    background-color: var(--whiteYellow);
+    border: solid var(--mediumYellow);
+    border-radius: 0;
+}
+
+/* SECCION CONTACTO modal */
+.contacto__modal {
+    display: none; /* escondido por defecto */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--white);
+    background-color: rgba(0, 0, 0, 0.2); /* fondo semi-transparente */
+    text-align: center;
+}
+
+/* SECCION CONTACTO contenedor modal */
+.contacto__contenedorModal {
+    max-width: 300px;
+    background-color: var(--darkYellow);
+    padding: 4rem;
+    border-radius: 10px;
+    margin: auto;
+}
+
+/* SECCION CONTACTO boton cerrar modal */
+.contacto__botonCerrar {
+    margin: 2rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    color: var(--darkYellow);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.contacto__botonCerrar:hover {
+    animation: scaleBoton 0.5s forwards;
+}
+
+/* SECCION CONTACTO transformación para escalar boton cerrar modal */
+@keyframes scaleBoton {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.3);
+    }
+}
+
+/* Al estar menos de 900px la anchura, la seccion se cambia de formato: */
+@media screen and (max-width: 900px) {
+
+    .contacto__contenedor {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .contacto__texto {
+        font-size: 1rem;
+    }
+
+}
+
+/* Al estar menos de 480px la anchura, la seccion se cambia de formato: */
+@media screen and (max-width: 480px) {
+    
+    .contacto__formulario {
+        margin: 0.25rem;
+    }
+
+    .contacto__formularioInput {
+        font-size: 0.9rem;
+    }
+
+    .contacto__contenedorModal {
+        font-size: small;
+        padding: 4rem 2rem;
+        margin: 0;
+    }
+
+    .contacto__checkboxesBox {
+        font-size: small;
+    }
+
+}

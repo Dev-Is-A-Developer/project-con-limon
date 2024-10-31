@@ -1,0 +1,400 @@
+/* ---------------------------------
+STYLES CSS
+- Variables
+- Body
+- Header (principal y cortina responsive)
+- Footer
+--------------------------------- */
+
+/* TIPOGRAFIAS
+*/
+
+/* Zodiak Light: la tipografía principal del sitio web */
+@font-face {
+    font-family: 'Zodiak Light';
+    src:
+        url(../fonts/Zodiak-Light.ttf) format('truetype'),
+        url(../fonts/Zodiak-Light.woff) format('woff');
+}
+
+/* Necto: el tipografía secundaria del sitio web */
+@font-face {
+    font-family: 'Necto';
+    src: url(../fonts/NectoMono-Regular.woff) format('woff');
+}
+
+/* Zodiak Regular: usado para aspectos puntuales, como el texto del logo del header y del intro pantalla animación de la página de coming soon */
+@font-face {
+    font-family: 'Zodiak';
+    src:
+        url(../fonts/Zodiak-Regular.ttf) format('truetype'),
+        url(../fonts/Zodiak-Regular.woff) format('woff');
+}
+
+/* Satoshi: usado para aspectos puntuales, como la frase de la seccion "intro" de la página de inicio y la página de coming soon  */
+@font-face {
+    font-family: 'Satoshi';
+    src:
+        url('../fonts/Satoshi-Variable.ttf') format('truetype'),
+        url('../fonts/Satoshi-Variable.woff') format('woff');
+}
+
+/* :root
+Colores principales y secundarios 
+*/
+:root {
+    --white: #FFFFFF;
+    --black: #19170f;
+    --whiteYellow: #fbf9f0;
+    --lightYellow: #fff0b4;
+    --mediumYellow: #efc002;
+    --darkYellow: #d5ab02;
+    --whiteGreen: #e8f5ee;
+    --lightGreen: #c4ebd6;
+    --mediumGreen: #63b392;
+    --lightRed: #f6825f;
+    --lightOrange: #fed089;
+}
+
+/* HTML
+Ajustes para esconder scrollbar
+*/
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+html::-webkit-scrollbar {
+    display: none;
+}
+
+/* BODY
+Ajustes para el body del sitio web
+*/
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Zodiak Light';
+    font-weight: 200;
+    letter-spacing: 0.04rem;
+    color: var(--black);
+    background-color: var(--white);
+    overscroll-behavior-y: none;
+}
+
+/* HEADER 
+Estilos para el header.
+Estructura:
+- header
+- logo
+- navegación
+- lista de paginas
+- elementos de la lista de paginas
+*/
+
+/* HEADER header */
+.header {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0 1.5rem;
+}
+
+/* HEADER logo */
+.header__logo a{
+    font-family: 'Zodiak';
+    color: var(--mediumYellow);
+    text-decoration: none;
+    font-size: 2rem;
+    transition-property: color;
+    transition-duration: 0.5s, 0.5s;
+}
+
+.header__logo a:hover {
+    color: var(--mediumGreen)
+}
+
+/* HEADER navigation */
+.header__nav {
+    display: flex;
+    align-items: center;
+    font-family: "Necto";
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+/* HEADER lista de paginas */
+.header__lista {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+}
+
+/* HEADER elementos de la lista */
+.header__elementoLista a {
+    color: var(--black);
+}
+
+/* Elementos de la lista por defecto sin subrayar (none) antes de hacer hover */
+.header__elementoLista a {
+    position: relative;
+    text-decoration: none;
+}
+
+/* Al hacer hover, se crea un elemento content vacío con posición absolute relativo al link para hacer transición de escala */
+.header__elementoLista a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: -0.5rem;
+    background-color: var(--mediumYellow);
+    transform: scaleX(0); /* al principio la raya es invisible */
+    transition: transform 0.3s ease-out; /* transición para estar visible */
+}
+
+/* Al hacer hover se ve la raya cubriendo 75% de la longitud del texto */
+.header__elementoLista a:hover::after {
+    transform: scaleX(0.75);
+}
+
+/* Al estar entre 769-992px de anchura, se cambia el estilo del header */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+
+    .header__logo a:hover {
+        font-size: 2rem;
+        text-align: center;
+        color: var(--mediumGreen)
+    }
+
+    .header__lista {
+        gap: 1.4rem;
+    }
+
+}
+
+/* HEADER CORTINA RESPONSIVE
+Estilos para el header responsive.
+Estructura:
+- boton de 3 rayas de header responsive
+- header
+- boton cerrar
+- lista de paginas
+- elementos de la lista de paginas
+*/
+
+/* HEADER boton para version responsive (display none hasta llegar a 768px como max-width*/
+.header__responsiveButton {
+    display: none;
+    color: var(--mediumYellow);
+    background-color: var(--lightYellow);
+    padding: 0.5rem 0.5rem;
+    border: none;
+    transition-property: font-size, color;
+    transition-duration: 0.5s, 0.5s;
+    transition: transform 2s;
+}
+
+.header__responsiveButton:hover {
+    color: var(--lightYellow);
+    background-color: var(--mediumYellow);
+    transform: rotateY(360deg);
+    cursor: pointer;
+}
+
+/* Al estar menos de 768px la anchura, el boton para la version responsive aparece y la lista de elementos del header principal desaparece */
+@media screen and (max-width: 768px) {
+    .header__nav {
+        display: none;
+        margin: 0;
+    }
+    
+    .header__responsiveButton {
+        display: block;
+    }
+}
+
+/* HEADER RESPONSIVE header */
+.headerResponsive {
+    width: 0; /* escondido inicialmente */
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    background-color: var(--whiteYellow);
+    color: var(--black);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s width ease;
+}
+
+/* HEADER RESPONSIVE boton cerrar */
+.headerResponsive__botonCierra {
+    margin: 1.6rem;
+    align-self: flex-end;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    padding: 0.25rem 0.7rem;
+    cursor: pointer;
+    background-color: var(--mediumYellow);
+    color: var(--white);
+}
+
+/* HEADER RESPONSIVE lista de paginas */
+.headerResponsive__lista {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER RESPONSIVE elementos de la lista */
+.headerResponsive__elementoLista {
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* HEADER RESPONSIVE enlaces de elementos de la lista */
+.headerResponsive__elementoLista a {
+    font-family: "Necto";
+    color: var(--black);
+    
+}
+
+/* Links de la lista por defecto sin subrayar (none) antes de hacer hover */
+.headerResponsive__elementoLista a {
+    position: relative;
+    text-decoration: none;
+}
+
+/* Al hacer hover, se crea un elemento content vacío con posición absolute relativo al link para hacer transición de escala */
+.headerResponsive__elementoLista a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: -0.5rem;
+    background-color: var(--mediumYellow);
+    transform: scaleX(0); /* al principio la raya es invisible */
+    transition: transform 0.3s ease-out; /* transición para estar visible */
+}
+
+/* Al hacer hover se ve la raya cubriendo 75% de ;a longitud del texto */
+.headerResponsive__elementoLista a:hover::after {
+    transform: scaleX(0.75);
+}
+
+/* FOOTER 
+Estilos para el footer.
+Estructura:
+- footer
+- seccion de arriba
+- barra de dividir footer
+- seccion de abajo
+*/
+
+/* FOOTER footer */
+.footer {
+    background-color: var(--whiteGreen);
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+/* FOOTER seccion arriba */
+.footer__seccionArriba {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) max-content;
+    max-width: 100%;
+    padding-bottom: 1rem;
+}
+
+/* FOOTER lista de seccion arriba */
+.footer__lista {
+    font-family: "Necto";
+    font-size: 0.9rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* FOOTER elementos de la lista de seccion arriba */
+.footer__elementoLista {
+    list-style-type: none;
+}
+
+/* FOOTER enlaces de elementos de la lista de seccion arriba */
+.footer__elementoLista a {
+    color: var(--black);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* FOOTER hacer efecto moverse a la derecha para los elementos de la lista de seccion arriba con enlaces */
+.elementoSlide:hover {
+    transform: translateX(10px);
+}
+
+/* FOOTER linea horizontal para separa secciones */
+.footer__linea{
+    width: 100%;
+    height: 1.5px;
+    background-color: var(--lightGreen);
+}
+
+/* FOOTER seccion abajo */
+.footer__seccionAbajo{
+    display: flex;
+    flex-direction: column;
+}
+
+/* FOOTER lista redes sociales de seccion abajo */
+.footer__listaRedes {
+    display: flex;
+    margin: 0;
+    padding: 1.5rem 0 0;
+    gap: 1rem;
+    font-family: "Necto";
+    font-size: 0.8rem;
+}
+
+/* FOOTER elementos de la lista redes de seccion abajo */
+.footer__elementoListaRedes {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+/* FOOTER copyright de seccion abajo */
+.footer__copyright {
+    font-family: "Necto";
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+
+/* Al estar menos de 768px la anchura, el footer adopta un display de tipo flex en columna */
+@media screen and (max-width: 768px) {
+    .footer__seccionArriba {
+        display: flex;
+        flex-direction: column;
+    }
+    
+}

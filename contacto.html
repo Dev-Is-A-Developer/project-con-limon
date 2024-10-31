@@ -1,0 +1,261 @@
+<!--
+CONTACTO
+Descripción: Este archivo HTML contiene la página de contacto del sitio web.
+Estructura general: Encabezado con barra de navegación / versión responsive, contenido principal (main con 2 partes), pie de página
+-->
+
+<!DOCTYPE html>
+
+<html lang="es">
+   
+    <head>
+        <title>Contacto - Con Limón</title>
+        <meta name="title" content="Contacto - Con Limón">
+        <meta name="author" content="Devon García">
+        <meta name="description" content="Con Limón es una pastelería de tartas elaborado con sabor, vivacidad y sol para tu cuerpo y mente.">
+        <meta name="keywords" content="pasteleria, pasteleria cerca de mi, mejores pastelerias, reposteria, pasteles, tartas, tartas personalizadas">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="css/contacto.css">
+        <script src="script/contacto.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    </head>
+
+    <body>
+
+        <!--
+        HEADER RESPONSIVE
+        Descripción: Este header solo aparece en la versión responsive del web
+        -->
+        <nav class="headerResponsive" id="navegacion">
+        
+            <button type="button" class="headerResponsive__botonCierra" id="botonCierraCortina">&times;</button>
+            
+            <ul class="headerResponsive__lista">
+    
+                <li class="headerResponsive__elementoLista"><a href="index.html">Inicio</a></li>
+
+                <li class="headerResponsive__elementoLista"><a href="sobre.html">Nosotros</a></li>
+
+                <li class="headerResponsive__elementoLista"><a href="productos.html">Productos</a></li>
+
+                <li class="headerResponsive__elementoLista"><a href="comingsoon.html">Eventos</a></li>
+
+                <li class="headerResponsive__elementoLista"><a href="contacto.html">Contacto</a></li>
+
+                <li class="headerResponsive__elementoLista"><a href="carrito.html">Carrito</a></li>
+    
+            </ul>
+    
+        </nav>
+    
+        <!--
+        HEADER
+        Descripción: Este header es el encabezado con barra de navegación base del web
+        -->
+        <header class="header">
+
+            <!-- Logo -->
+            <h1 class="header__logo"><a href="index.html">con limón</a></h1>
+
+            <!-- Barra de navegación -->
+            <nav class="header__nav">
+
+                <ul class="header__lista">
+
+                    <li class="header__elementoLista"><a href="index.html">Inicio</a></li>
+
+                    <li class="header__elementoLista"><a href="sobre.html">Nosotros</a></li>
+
+                    <li class="header__elementoLista"><a href="productos.html">Productos</a></li>
+
+                    <li class="header__elementoLista"><a href="comingsoon.html">Eventos</a></li>
+
+                    <li class="header__elementoLista"><a href="contacto.html">Contacto</a></li>
+
+                    <li class="header__elementoLista"><a href="carrito.html">Carrito</a></li>
+
+                </ul>
+
+            </nav>
+
+            <!-- Boton de 3 barras de header responsive -->
+            <button type="button" class="header__responsiveButton" id="botonAbreCortina"><i class="fa-solid fa-bars"></i></button>
+            
+        </header>
+
+        <!--
+        MAIN
+        Descripción: El main contiene 2 secciones: una hero image y una seccion de contacto con formulario
+        -->
+        <main>
+            
+            <!--
+            SECCION HERO
+            Descripción: Seccion para hero image y text
+            -->
+            <section class="hero"> 
+
+                <div class="hero__contenedor">
+    
+                    <h1 class="hero__titulo"> Contacto</h1>
+    
+                </div>
+    
+            </section>
+    
+            <!--
+            SECCION CONTACTO
+            Descripción: Sección de descripción y formulario de contacto
+            -->
+            <section class="contacto">
+    
+                <h2 class="contacto__titulo"> Aquí en Con Limón, nos encantaría saber de ti. </h2>
+    
+                <div class="contacto__contenedor">
+
+                    <!-- Descripción y detalles del contacto -->
+                    <div class="contacto__descripcion">
+    
+                        <p class="contacto__texto"> <strong>Tartas Personalizadas:</strong>
+                             ¿Buscas una tarta para un evento especial o un pedido a medida? Cuéntanos tu idea y la haremos realidad.
+                        </p>
+                        <p class="contacto__texto"> <strong>Colaboraciones:</strong>
+                             Si deseas colaborar con nosotros o tener Con Limón en tu próximo evento, no dudes en contactarnos.
+                        </p>
+                        <p class="contacto__texto"> <strong>Sugerencias:</strong>
+                             Valoramos mucho tu opinión. Si quieres compartir tu experiencia con nosotros o tienes alguna sugerencia, 
+                            estaremos encantados de escucharte.
+                        </p>
+                        <p class="contacto__texto"> <i>Una vez que recibamos tu formulario, nos pondrémos en comunicación contigo por correo electrónico lo más rápido posible.</i>
+                        </p>
+    
+                    </div>
+    
+                    <!-- Formulario de contacto -->
+                    <div class="contacto__formulario">
+    
+                        <form name="Contacto" action="#" method="get" id="contacto">
+
+                            <div class="contacto__formularioInput">
+                                <label for="nom">Nombre:</label><br>
+                                <input name="nombre" type="text" placeholder="Escribe tu nombre" id="nom" required>
+                            </div>
+
+                            <div class="contacto__formularioInput">
+                                <label for="ape">Apellidos:</label><br>
+                                <input name="apellido" type="text" placeholder="Escribe tu(s) apellido(s)" id="ape" required>
+                            </div>
+
+                            <div class="contacto__formularioInput">
+                                <label for="email">Correo electrónico:</label> <br>
+                                <input name="correo" type="email" placeholder="Escribe tu correo" id="email" required>
+                            </div>
+
+                            <div class="contacto__formularioInput">
+                                <p class="contacto__tema"> Tema: </p>
+                                <div class="contacto__checkboxes">
+                                    <div class="contacto__checkboxesBox">
+                                        <input type="checkbox" name="Tartas Personalizadas" id="checkbox1">
+                                        <label for="checkbox1">Tartas Personalizadas</label>
+                                    </div>
+                                    <div class="contacto__checkboxesBox">
+                                        <input type="checkbox" name="Colaboraciones" id="checkbox2">
+                                        <label for="checkbox2">Colaboraciones</label>
+                                    </div>
+                                    <div class="contacto__checkboxesBox">
+                                        <input type="checkbox" name="Sugerencias" id="checkbox3">
+                                        <label for="checkbox3">Sugerencias</label>
+                                    </div>
+                                    <div class="contacto__checkboxesBox">
+                                        <input type="checkbox" name="Otro" id="checkbox4">
+                                        <label for="checkbox4">Otro</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="contacto__formularioInput">
+                                <label for="men">Mensaje:</label>
+                                <br>
+                                <textarea name="mensaje" rows="10" class="contacto__textarea" id="men" placeholder="Escribe tu mensaje"></textarea>
+                            </div>
+
+                            <div class="contacto__formularioInput">
+                                <input type="submit" value="Enviar" class="contacto__enviar" id="env">
+                            </div>
+    
+                        </form>
+
+                    </div>
+    
+                </div>
+
+                <!-- Modal para confirmar el envío del formulario -->
+                <div class="contacto__modal" id="modal">
+                        
+                    <div class="contacto__contenedorModal">
+
+                        <button type="button" name="botón cerrar" id="cer" class="contacto__botonCerrar">x</button>
+                        <p class="contacto__mensaje">Gracias por ponerte en contacto.<br>Te responderemos en breve.</p>
+
+                    </div>
+
+                </div>
+    
+            </section>
+    
+        </main>
+
+        <!--
+        FOOTER
+        Descripción: El footer está compuesto de dos partes:
+        1. Seccion arriba: la dirección, el correo electrónico, los enlaces del header, e información sobre la política y temas legales
+        2. Seccion abajo: copyright, redes sociales
+        -->
+        <footer class="footer">
+
+            <!-- Seccion de arriba -->
+            <div class="footer__seccionArriba">
+
+                    <ul class="footer__lista">
+                        <li class="footer__elementoLista">C/ Limonero 1, Sevilla</li>
+                        <li class="footer__elementoLista">info@conlimon.com</li>
+                    </ul>
+
+                    <ul class="footer__lista">
+                        <li class="footer__elementoLista elementoSlide"><a href="index.html">Inicio</a></li>
+                        <li class="footer__elementoLista elementoSlide"><a href="sobre.html">Nosotros</a></li>
+                        <li class="footer__elementoLista elementoSlide"><a href="productos.html">Productos</a></li>
+                        <li class="footer__elementoLista elementoSlide"><a href="contacto.html">Contacto</a></li>
+                    </ul>
+
+                    <ul class="footer__lista">
+                        <li class="footer__elementoLista elementoSlide"><a href="#">Términos y Condiciones</a></li>
+                        <li class="footer__elementoLista elementoSlide"><a href="#">Política de Privacidad</a></li>
+                        <li class="footer__elementoLista elementoSlide"><a href="#">Condiciones de Compra</a></li>
+                    </ul>
+
+            </div>
+
+            <!-- Barra para separar secciones -->
+            <div class="footer__linea"></div>
+
+            <!-- Seccion de abajo -->
+            <div class="footer__seccionAbajo">
+
+                <ul class="footer__listaRedes">
+                    <li class="footer__elementoListaRedes"><i class="fa fa-brands fa-instagram"></i> Instagram</li>
+                    <li class="footer__elementoListaRedes"><i class="fa fa-brands fa-tiktok"></i> Tiktok</li>
+                    <li class="footer__elementoListaRedes"><i class="fa fa-brands fa-facebook"></i> Facebook</li>
+                </ul>
+
+                <p class="footer__copyright"><i class="fa-regular fa-copyright"></i> 2024 Con Limón.</p>
+
+            </div>
+
+        </footer>
+
+    </body>
+
+</html>

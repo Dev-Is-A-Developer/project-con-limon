@@ -1,0 +1,172 @@
+/* ---------------------------------
+CARRITO CSS
+- Titulo y descripcion
+- Main: carrito (cards y boton de checkout)
+--------------------------------- */
+
+/* MAIN
+ajustes de main */
+main {
+    min-height: 90vh;
+}
+
+/* titulo */
+.carrito__titulo {
+    padding: 0.5rem 1.5rem;
+}
+
+/* descripción */
+.carrito__descripcion {
+    padding: 0.5rem 1.5rem;
+}
+
+/* SECCION CARRITO 
+Estilos para la seccion de carrito.
+Estructura:
+- contenedor
+- card
+- imagen
+- contenedor texto: nombre, detalles (precio, cantidad, boton para eliminar producto)
+- boton para ir al checkout
+*/
+
+/* SECCION CARRITO contenedor */
+.carrito__contenedor {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+/* SECCION CARRITO card de producto */
+.carrito__carritoCard {
+    font-family: "Necto";
+    border: 1px solid var(--mediumYellow);
+    background-color: var(--whiteYellow);
+    display: flex;
+    flex-direction: row;
+}
+
+/* SECCION CARRITO imagen contenedor */
+.carritoCard__imagen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 7rem;
+    height: 7rem;
+}
+
+/* SECCION CARRITO imagen */
+.carrito__img {
+    width: 7rem;
+    height: 7rem;
+    display: block;
+    object-fit: cover;
+}
+
+/* SECCION CARRITO texto contenedor */
+.carritoCard__texto {
+    margin: 0rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* SECCION CARRITO contenedor detalles del producto */
+.carritoCard__textoTotal {
+    font-size: small;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* SECCION CARRITO precio */
+.carritoCard__precio {
+    color: var(--mediumGreen);
+}
+
+/* SECCION CARRITO cantidad */
+.carritoCard__cantidad {
+    font-size: 0.8rem;
+}
+
+/* SECCION CARRITO boton para eliminar producto */
+.carritoCard__boton {
+    font-family: "Necto";
+    padding: 1rem;
+    margin: 0;
+    border: 0;
+    cursor: pointer;
+    color: var(--black);
+    background-color: transparent;
+    border: none;
+    align-self: flex-end;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+
+.carritoCard__boton:hover {
+    opacity: 1;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* SECCION CARRITO boton para ir al pago */
+.carrito__botonCheckout {
+    font-family: 'Necto';
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--black);
+    background-color: var(--mediumYellow);
+    border: none;
+    padding: 1rem;
+    transition: background-color 0.5s ease;
+}
+
+.carrito__botonCheckout:hover {
+    cursor: pointer;
+    background-color: var(--lightYellow);
+}
+
+/* Al estar menos de 550px la anchura, la seccion se cambia de formato: */
+@media screen and (max-width: 550px) {
+    .carrito__carritoCard {
+
+        flex-direction: column;
+        align-items: center;
+    
+    }
+
+    .carritoCard__nombre {
+        text-align: center;
+    }
+
+    .carritoCard__imagen{
+        margin: 2rem 0 1rem;
+    }
+
+    .carritoCard__textoTotal {
+
+        margin: 0 0 2rem;
+
+    }
+
+}
+
+/* Al estar menos de 480px la anchura, la seccion se cambia de formato: */
+@media screen and (max-width: 480px) {
+
+    .carritoCard__textoTotal {
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .carritoCard__boton {
+        margin: 1rem 0 0 0;
+    }
+}

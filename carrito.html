@@ -1,0 +1,206 @@
+<!--
+CARRITO
+Descripción: Este archivo HTML contiene la página del carrito de compras del sitio web.
+Estructura general: Encabezado con barra de navegación / versión responsive, contenido principal (main con 1 parte), pie de página
+-->
+
+<!DOCTYPE html>
+
+<html lang="es">
+   
+    <head>
+        <title>Carrito - Con Limón</title>
+        <meta name="title" content="Carrito - Con Limón">
+        <meta name="author" content="Devon García">
+        <meta name="description" content="Con Limón es una pastelería de tartas elaborado con sabor, vivacidad y sol para tu cuerpo y mente.">
+        <meta name="keywords" content="pasteleria, pasteleria cerca de mi, mejores pastelerias, reposteria, pasteles, tartas, tartas personalizadas">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="css/carrito.css">
+        <script src="script/carrito.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    </head>
+
+    <body>
+
+        <!--
+        HEADER RESPONSIVE
+        Descripción: Este header solo aparece en la versión responsive del web
+        -->
+        <nav class="headerResponsive" id="navegacion">
+        
+            <button type="button" class="headerResponsive__botonCierra" id="botonCierraCortina">&times;</button>
+            
+            <ul class="headerResponsive__lista">
+    
+                <li class="headerResponsive__elementoLista"><a href="index.html">Inicio</a></li>
+
+                <li class="headerResponsive__elementoLista"><a href="sobre.html">Nosotros</a></li>
+
+                <li class="headerResponsive__elementoLista"><a href="productos.html">Productos</a></li>
+
+                <li class="headerResponsive__elementoLista"><a href="comingsoon.html">Eventos</a></li>
+
+                <li class="headerResponsive__elementoLista"><a href="contacto.html">Contacto</a></li>
+
+                <li class="headerResponsive__elementoLista"><a href="carrito.html">Carrito</a></li>
+    
+            </ul>
+    
+        </nav>
+    
+        <!--
+        HEADER
+        Descripción: Este header es el encabezado con barra de navegación base del web
+        -->
+        <header class="header">
+
+            <!-- Logo -->
+            <h1 class="header__logo"><a href="index.html">con limón</a></h1>
+
+            <!-- Barra de navegación -->
+            <nav class="header__nav">
+
+                <ul class="header__lista">
+
+                    <li class="header__elementoLista"><a href="index.html">Inicio</a></li>
+
+                    <li class="header__elementoLista"><a href="sobre.html">Nosotros</a></li>
+
+                    <li class="header__elementoLista"><a href="productos.html">Productos</a></li>
+
+                    <li class="header__elementoLista"><a href="comingsoon.html">Eventos</a></li>
+
+                    <li class="header__elementoLista"><a href="contacto.html">Contacto</a></li>
+
+                    <li class="header__elementoLista"><a href="carrito.html">Carrito</a></li>
+
+                </ul>
+
+            </nav>
+
+            <!-- Boton de 3 barras de header responsive -->
+            <button type="button" class="header__responsiveButton" id="botonAbreCortina"><i class="fa-solid fa-bars"></i></button>
+            
+        </header>
+
+        <!--
+        MAIN
+        Descripción: El main contiene 1 sección: el carrito con los productos y un boton para ir al checkout
+        -->
+        <main>
+
+            <h1 class="carrito__titulo">Carrito</h1>
+            <h3 class="carrito__descripcion">Productos en tu cesta de compras:</h3>
+            
+            <!-- Contenedor de carrito -->
+            <div class="carrito__contenedor">
+
+                <article class="carrito__carritoCard">
+                        
+                    <div class="carritoCard__imagen">
+                        <a href="tarta-limon.html" target="_blank"><img src="./images/tarta-limon.jpg" alt="tarta limon" class="carrito__img"></a>
+                    </div>
+
+                    <div class="carritoCard__texto">
+
+                        <h4 class="carritoCard__nombre">Tarta de Limón, Lavanda y Miel</h4>
+
+                        <div class="carritoCard__textoTotal">
+                        
+                            <p class="carritoCard__precio">20€/tarta</p>
+
+                            <p class="carritoCard__cantidad"><b>Cantidad:</b>2</p>
+
+                            <button type="button" class="carritoCard__boton" title="Eliminar">Eliminar</button>
+
+                        </div>
+
+                    </div>
+                
+                </article>
+
+
+                <article class="carrito__carritoCard">
+                        
+                    <div class="carritoCard__imagen">
+                        <a href="tarta-mandarina.html" target="_blank"><img src="./images/tarta-mandarina.jpg" alt="tarta mandarina" class="carrito__img"></a>
+                    </div>
+        
+                    <div class="carritoCard__texto">
+
+                        <h4 class="carritoCard__nombre">Tarta de Mandarina y Cúrcuma</h4>
+
+                        <div class="carritoCard__textoTotal">
+                        
+                            <p class="carritoCard__precio">25€/tarta</p>
+
+                            <p class="carritoCard__cantidad"><b>Cantidad:</b>1</p>
+
+                            <button type="button" class="carritoCard__boton" title="Eliminar">Eliminar</button>
+                            
+                        </div>
+
+                    </div>
+                
+                </article>
+
+                <a class="carrito__botonCheckout" href="pago.html">Checkout</a>
+
+            </div>
+
+        </main>
+
+        <!--
+        FOOTER
+        Descripción: El footer está compuesto de dos partes:
+        1. Seccion arriba: la dirección, el correo electrónico, los enlaces del header, e información sobre la política y temas legales
+        2. Seccion abajo: copyright, redes sociales
+        -->
+        <footer class="footer">
+
+            <!-- Seccion de arriba -->
+            <div class="footer__seccionArriba">
+
+                    <ul class="footer__lista">
+                        <li class="footer__elementoLista">C/ Limonero 1, Sevilla</li>
+                        <li class="footer__elementoLista">info@conlimon.com</li>
+                    </ul>
+
+                    <ul class="footer__lista">
+                        <li class="footer__elementoLista elementoSlide"><a href="index.html">Inicio</a></li>
+                        <li class="footer__elementoLista elementoSlide"><a href="sobre.html">Nosotros</a></li>
+                        <li class="footer__elementoLista elementoSlide"><a href="productos.html">Productos</a></li>
+                        <li class="footer__elementoLista elementoSlide"><a href="contacto.html">Contacto</a></li>
+                    </ul>
+
+                    <ul class="footer__lista">
+                        <li class="footer__elementoLista elementoSlide"><a href="#">Términos y Condiciones</a></li>
+                        <li class="footer__elementoLista elementoSlide"><a href="#">Política de Privacidad</a></li>
+                        <li class="footer__elementoLista elementoSlide"><a href="#">Condiciones de Compra</a></li>
+                    </ul>
+
+            </div>
+
+            <!-- Barra para separar secciones -->
+            <div class="footer__linea"></div>
+
+            <!-- Seccion de abajo -->
+            <div class="footer__seccionAbajo">
+
+                <ul class="footer__listaRedes">
+                    <li class="footer__elementoListaRedes"><i class="fa fa-brands fa-instagram"></i> Instagram</li>
+                    <li class="footer__elementoListaRedes"><i class="fa fa-brands fa-tiktok"></i> Tiktok</li>
+                    <li class="footer__elementoListaRedes"><i class="fa fa-brands fa-facebook"></i> Facebook</li>
+                </ul>
+
+                <p class="footer__copyright"><i class="fa-regular fa-copyright"></i> 2024 Con Limón.</p>
+
+            </div>
+
+        </footer>
+
+    </body>
+
+</html>

@@ -1,0 +1,378 @@
+/* ---------------------------------
+SOBRE CSS
+- Body (ajustes/animacion)
+- Main: nosotros, slider de videos (slider), compromiso, ingredientes (carousel)
+--------------------------------- */
+
+/* BODY
+Ajustes para el body del sitio web
+*/
+body {
+    animation-name: colorChange;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+} 
+
+/* Animacion para cambiar color de fondo al cargar */ 
+@keyframes colorChange {
+
+    0% {
+        background-color: var(--whiteYellow);
+    }
+
+    33% {
+        background-color: var(--lightYellow);
+    }
+
+    66% {
+        background-color: var(--lightYellow);
+    }
+
+    100% {
+        background-color: var(--whiteYellow);
+    }
+
+}
+
+/* SECCION NOSOTROS 
+Estilos para la seccion de nosotros / quiénes somos.
+Estructura:
+- nosotros contenedor
+- titulo
+- texto
+*/
+
+/* SECCION NOSOTROS contenedor */
+.nosotros {
+    padding: 4rem 7rem 2rem;
+    text-align: center;
+}
+
+/* SECCION NOSOTROS titulo */
+.nosotros__titulo {
+    margin: 0;
+}
+
+/* SECCION NOSOTROS texto */
+.nosotros__texto {
+    margin: 2rem 0 0;
+}
+
+/* Al estar menos de 768px la anchura, la seccion de nosotros se cambia de formato: */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    .nosotros {
+        padding: 3rem 4rem 0;
+    }
+
+}
+
+/* Al estar menos de 480px la anchura, la seccion de nosotros se cambia de formato: */
+@media screen and (max-width: 480px) {
+
+    .nosotros {
+        padding: 2rem 3rem 0;
+    }
+
+    .nosotros__texto {
+        text-align: left;
+        font-size: small;
+    }
+
+}
+
+/* SECCION SLIDER 
+Estilos para la seccion de slider de videos.
+Estructura:
+- contenedor
+- slides contenedor
+- slide
+- botones
+*/
+
+/* SECCION SLIDER contenedor */
+.slider__contenedor {
+    margin: 2rem 0 4.5rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+/* SECCION SLIDER slide contenedor */
+.slider__slider {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    /* scrollbar-width: none;       esconder barra de scroll */
+}
+
+/* SECCION SLIDER slide */
+.slider__slide {
+    width: 100%;
+    height: 100%;
+}
+
+/* SECCION SLIDER flecha */
+.slider__flecha {
+    height: 20%;
+    font-size: 1.75rem;
+    padding: 0.75rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 1.2rem;
+    margin: 0.5rem;
+    transition: color 0.25s, background-color 0.5s;
+    cursor: pointer;
+}
+
+.slider__flecha:hover {
+    background-color: var(--DarkTan);
+    color: var(--LightTan);
+}
+
+/* Al estar menos de 768px la anchura, el slider se cambia de formato: */
+@media screen and (min-width: 551px) and (max-width: 768px) {
+
+    .slider__contenedor {
+        margin: 3rem 0 4.5rem;
+    }
+}
+
+/* Al estar menos de 550px la anchura, el slider se cambia de formato: */
+@media screen and (max-width: 550px) {
+
+    .slider__contenedor {
+        display:block;
+    }
+
+    .slider__slider {
+        height: 60vh
+    }
+
+    .slider__flecha {
+        font-size: 1.2rem;
+        padding: 0;
+    }
+
+}
+
+
+
+/* SECCION COMPROMISO 
+Estilos para la seccion de compromiso de la marca.
+Estructura:
+- contenedor
+- titulo
+- texto
+*/
+
+/* SECCION COMPROMISO contenedor */
+.compromiso {
+    background-color: var(--lightYellow);
+    padding: 4rem 7rem;
+    text-align: center;
+    margin: 0;
+}
+
+/* SECCION COMPROMISO titulo */
+.compromiso__titulo {
+    margin: 0;
+}
+
+/* SECCION COMPROMISO texto */
+.compromiso__texto {
+    margin: 2rem 0 0;
+}
+
+/* Al estar menos de 768px la anchura, la seccion de compromiso se cambia de formato: */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    .compromiso {
+        padding: 3rem 4rem;
+        text-align: center;
+    }
+
+}
+
+/* Al estar menos de 480px la anchura, la seccion de compromiso se cambia de formato: */
+@media screen and (max-width: 480px) {
+
+    .compromiso {
+        padding: 2rem 3rem;
+    }
+
+    .compromiso__texto {
+        font-size: small;
+        text-align: left;
+    }
+
+}
+
+/* SECCION CAROUSEL INGREDIENTES 
+Estilos para la seccion de ingredientes.
+Estructura:
+- contenedor
+- titulo
+- carousel
+- card
+- imagen
+- texto
+- botones
+*/
+
+/* SECCION CAROUSEL INGREDIENTES contenedor */
+.ingredientes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+}
+
+/* SECCION CAROUSEL INGREDIENTES titulo */
+.ingredientes__titulo {
+    padding: 1.5rem;
+}
+
+/* SECCION CAROUSEL INGREDIENTES carousel */
+.ingredientes__carousel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+}
+
+/* SECCION CAROUSEL INGREDIENTES card */
+.ingredientes__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* SECCION CAROUSEL INGREDIENTES imagen */
+.ingredientes__imagen {
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+}
+
+/* SECCION CAROUSEL INGREDIENTES texto */
+.ingredientes__texto {
+    height: 6rem;
+    padding: 2rem 0;
+    font-family: "Necto";
+}
+
+/* SECCION CAROUSEL INGREDIENTES boton redonda de elegir imagen */
+.contenedor__boton {
+    padding: 0.2rem;
+    background-color: var(--mediumYellow);
+    border-color: transparent;
+    border-radius: 2rem;
+    margin: 0.25rem;
+    opacity: 0.5;
+}
+
+.contenedor__boton:hover {
+    cursor: pointer;
+}
+
+/* SECCION CAROUSEL INGREDIENTES */
+.ingredientes__buttons {
+    padding: 1.5rem 0 1rem;
+}
+
+/* SECCION CAROUSEL INGREDIENTES todos los botones */
+.ingredientes__buttons button {
+    background-color: var(--whiteYellow);
+    color: var(--darkYellow);
+    border: 3px solid ;
+    border-color: transparent;
+    margin: 0 0.25rem;
+}
+
+.ingredientes__buttons button:hover {
+    cursor: pointer;
+    border-color: var(--darkYellow);
+}
+
+/* SECCION CAROUSEL INGREDIENTES flecha izq */
+.ingredientes__flechaIzquierda {
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 1.5rem;
+}
+
+/* SECCION CAROUSEL INGREDIENTES flecha der */
+.ingredientes__flechaDerecha {
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 1.5rem;
+}
+
+/* SECCION CAROUSEL INGREDIENTES boton pausar */
+.ingredientes__botonPausar {
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    font-family: 'Necto';
+}
+
+/* Al estar menos de 768px la anchura, el carousel se cambia de formato: */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    .ingredientes__carousel {
+        width: 85%;
+    }
+
+    .ingredientes__texto {
+        height: 7rem;
+        padding: 2rem 2rem;
+        font-size: 0.9rem;
+    }
+
+}
+
+/* Al estar menos de 480px la anchura, el carousel se cambia de formato: */
+@media screen and (max-width: 480px) {
+
+    .ingredientes {
+        height: 100vh;
+    }
+
+    .ingredientes__titulo {
+        padding-bottom: 0.25rem;
+    }
+
+    .ingredientes__imagen {
+        height: 12rem;
+        width: 12rem;
+    }
+
+    .ingredientes__texto {
+        height: 10rem;
+        padding: 1rem 0 2rem;
+        font-size: 0.8rem;
+    }
+
+    .ingredientes__flechaIzquierda {
+        font-size: 0.7rem;
+    }
+    
+    .ingredientes__flechaDerecha {
+        font-size: 0.7rem;
+    }
+    
+    .ingredientes__botonPausar {
+        font-size: 0.85rem;
+    }
+
+}

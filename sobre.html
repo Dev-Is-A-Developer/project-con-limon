@@ -1,0 +1,273 @@
+<!--
+SOBRE
+Descripción: Este archivo HTML contiene la página de "Nosotros" (acerca de) del sitio web.
+Estructura general: Encabezado con barra de navegación / versión responsive, contenido principal (main con 4 secciones), pie de página
+-->
+
+<!DOCTYPE html>
+
+<html lang="es">
+   
+    <head>
+        <title>Sobre - Con Limón</title>
+        <meta name="title" content="Sobre - Con Limón">
+        <meta name="author" content="Devon García">
+        <meta name="description" content="Con Limón es una pastelería de tartas elaborado con sabor, vivacidad y sol para tu cuerpo y mente.">
+        <meta name="keywords" content="pasteleria, pasteleria cerca de mi, mejores pastelerias, reposteria, pasteles, tartas, tartas personalizadas">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="css/sobre.css">
+        <script src="script/sobre.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    </head>
+
+    <body>
+
+        <!--
+        HEADER RESPONSIVE
+        Descripción: Este header solo aparece en la versión responsive del web
+        -->
+        <nav class="headerResponsive" id="navegacion">
+        
+            <button type="button" class="headerResponsive__botonCierra" id="botonCierraCortina">&times;</button>
+            
+            <ul class="headerResponsive__lista">
+    
+                <li class="headerResponsive__elementoLista"><a href="index.html">Inicio</a></li>
+
+                <li class="headerResponsive__elementoLista"><a href="sobre.html">Nosotros</a></li>
+
+                <li class="headerResponsive__elementoLista"><a href="productos.html">Productos</a></li>
+
+                <li class="headerResponsive__elementoLista"><a href="comingsoon.html">Eventos</a></li>
+
+                <li class="headerResponsive__elementoLista"><a href="contacto.html">Contacto</a></li>
+
+                <li class="headerResponsive__elementoLista"><a href="carrito.html">Carrito</a></li>
+    
+            </ul>
+    
+        </nav>
+    
+        <!--
+        HEADER
+        Descripción: Este header es el encabezado con barra de navegación base del web
+        -->
+        <header class="header">
+
+            <!-- Logo -->
+            <h1 class="header__logo"><a href="index.html">con limón</a></h1>
+
+            <!-- Barra de navegación -->
+            <nav class="header__nav">
+
+                <ul class="header__lista">
+
+                    <li class="header__elementoLista"><a href="index.html">Inicio</a></li>
+
+                    <li class="header__elementoLista"><a href="sobre.html">Nosotros</a></li>
+
+                    <li class="header__elementoLista"><a href="productos.html">Productos</a></li>
+
+                    <li class="header__elementoLista"><a href="comingsoon.html">Eventos</a></li>
+
+                    <li class="header__elementoLista"><a href="contacto.html">Contacto</a></li>
+
+                    <li class="header__elementoLista"><a href="carrito.html">Carrito</a></li>
+
+                </ul>
+
+            </nav>
+
+            <!-- Boton de 3 barras de header responsive -->
+            <button type="button" class="header__responsiveButton" id="botonAbreCortina"><i class="fa-solid fa-bars"></i></button>
+            
+        </header>
+
+        <!--
+        MAIN
+        Descripción: El main contiene 4 secciones: nosotros, slider de videos, compromiso e ingredientes
+        -->
+        <main>
+
+            <!--
+            SECCION NOSOTROS
+            Descripción: Esta seccion contiene información sobre "quiénes somos"
+            -->
+            <section class="nosotros">
+
+                <h2 class="nosotros__titulo">Quiénes Somos</h2> 
+
+                <div class="nosotros__contenedor">
+                    
+                    <h3 class="nosotros__texto">En Con Limón, llevamos la frescura y la magia de los cítricos a cada una de nuestras tartas. Creemos que los dulces pueden ser deliciosos, nutritivos y, al mismo tiempo, una celebración para el cuerpo y la mente. Con ingredientes saludabes y un toque de creatividad, nuestras recetas están diseñadas para energizar y llenar de color tus momentos. Nos apasiona crear un espacio para compartir, reír y disfrutar de postres que te hacen sentir tan bien como saben.</h3>
+
+                </div>
+
+            </section>
+
+            <!--
+            SECCION SLIDER
+            Descripción: Este div un slider con videos mostrando videos la experiencia de hornear en Cón Limón
+            -->
+            <div class="slider">
+                
+                <div class="slider__contenedor">
+
+                    <button type="button" class="slider__flecha flechaLeft" id="flechaPrevious">&leftarrow;</button>
+                    
+                    <div class="slider__slider" id="slider">
+            
+                        <video class="slider__slide" width="432" height="768" autoplay muted preload="auto" loop>
+                            <source src="video/baking-0.mp4" type="video/mp4">
+                        </video>
+
+                        <video class="slider__slide" width="432" height="768" autoplay muted preload="auto" loop>
+                            <source src="video/baking-1.mp4" type="video/mp4">
+                        </video>
+
+                        <video class="slider__slide" width="432" height="768" autoplay muted preload="auto" loop>
+                            <source src="video/baking-2.mp4" type="video/mp4">
+                        </video>
+
+                        <video class="slider__slide" width="432" height="768" autoplay muted preload="auto" loop>
+                            <source src="video/baking-3.mp4" type="video/mp4">
+                        </video>
+
+                        <video class="slider__slide" width="432" height="768" autoplay muted preload="auto" loop>
+                            <source src="video/baking-4.mp4" type="video/mp4">
+                        </video>
+
+                        <video class="slider__slide" width="432" height="768" autoplay muted preload="auto" loop>
+                            <source src="video/baking-5.mp4" type="video/mp4">
+                        </video>
+
+                        <video class="slider__slide" width="432" height="768" autoplay muted preload="auto" loop>
+                            <source src="video/baking-6.mp4" type="video/mp4">
+                        </video>
+            
+                    </div>
+                    
+                    <button type="button" class="slider__flecha flechaRight" id="flechaNext">&rightarrow;</button>
+            
+                </div> 
+
+            </div>
+
+            <!--
+            SECCION COMPROMISO
+            Descripción: Esta seccion habla del compromiso de la marca
+            -->
+            <section class="compromiso">
+
+                <h2 class="compromiso__titulo">Nuestro Compromiso</h2> 
+
+                <div class="compromiso__contenedor">
+                    
+                    <h4 class="compromiso__texto">Cada uno de nuestros postres se prepara con ingredientes naturales y frescos, priorizando opciones saludables sin renunciar a la explosión de sabor. Trabajamos con proveedores locales y sostenibles, seleccionando frutas frescas, harinas integrales y endulzantes naturales que, además de deliciosos, son buenos para ti y para el planeta.</h4>
+
+                </div>
+
+            </section>
+
+            <!--
+            SECCION INGREDIENTES
+            Descripción: Este seccion tiene un carousel con ingredientes y los beneficios de cada uno
+            -->
+            <section class="ingredientes">
+                
+                <h2 class="ingredientes__titulo">Ingredientes</h2> 
+
+                <div class="ingredientes__carousel">
+
+                    <div class="ingredientes__card">
+
+                        <img src="images/limon.jpg" alt="imagenCarousel" id="imagen" class="ingredientes__imagen">
+                        
+                        <p id="texto" class="ingredientes__texto">Limón: Refuerza el sistema inmunológico gracias a su alto contenido de vitamina C, aumenta la energía, ayuda a la concentración con antioxidantes como flavonoides y carotenoides que mejoran la circulación, mejora la digestión y favorece la eliminación de toxinas</p>
+
+                        <!-- Botones para ir a un ingrediente especifico-->
+                        <div class="ingredientes__contenedorBotones">
+
+                            <button type="button" class="contenedor__boton" value="0"></button>
+                            <button type="button" class="contenedor__boton" value="1"></button>
+                            <button type="button" class="contenedor__boton" value="2"></button>
+                            <button type="button" class="contenedor__boton" value="3"></button>
+                            <button type="button" class="contenedor__boton" value="4"></button>
+                            <button type="button" class="contenedor__boton" value="5"></button>
+                            <button type="button" class="contenedor__boton" value="6"></button>
+                            <button type="button" class="contenedor__boton" value="7"></button>
+                            <button type="button" class="contenedor__boton" value="8"></button>
+    
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Botones para navegar entre los ingredientes y pausar el carousel -->
+                <div class="ingredientes__buttons">
+
+                    <button type="button" id="anterior" class="ingredientes__flechaIzquierda">&leftarrow;</button>
+                    <button type="button" id="pausa" class="ingredientes__botonPausar">Pausa</button>
+                    <button type="button" id="proxima" class="ingredientes__flechaDerecha">&rightarrow;</button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <!--
+        FOOTER
+        Descripción: El footer está compuesto de dos partes:
+        1. Seccion arriba: la dirección, el correo electrónico, los enlaces del header, e información sobre la política y temas legales
+        2. Seccion abajo: copyright, redes sociales
+        -->
+        <footer class="footer">
+
+            <!-- Seccion de arriba -->
+            <div class="footer__seccionArriba">
+
+                    <ul class="footer__lista">
+                        <li class="footer__elementoLista">C/ Limonero 1, Sevilla</li>
+                        <li class="footer__elementoLista">info@conlimon.com</li>
+                    </ul>
+
+                    <ul class="footer__lista">
+                        <li class="footer__elementoLista elementoSlide"><a href="index.html">Inicio</a></li>
+                        <li class="footer__elementoLista elementoSlide"><a href="sobre.html">Nosotros</a></li>
+                        <li class="footer__elementoLista elementoSlide"><a href="productos.html">Productos</a></li>
+                        <li class="footer__elementoLista elementoSlide"><a href="contacto.html">Contacto</a></li>
+                    </ul>
+
+                    <ul class="footer__lista">
+                        <li class="footer__elementoLista elementoSlide"><a href="#">Términos y Condiciones</a></li>
+                        <li class="footer__elementoLista elementoSlide"><a href="#">Política de Privacidad</a></li>
+                        <li class="footer__elementoLista elementoSlide"><a href="#">Condiciones de Compra</a></li>
+                    </ul>
+
+            </div>
+
+            <!-- Barra para separar secciones -->
+            <div class="footer__linea"></div>
+
+            <!-- Seccion de abajo -->
+            <div class="footer__seccionAbajo">
+
+                <ul class="footer__listaRedes">
+                    <li class="footer__elementoListaRedes"><i class="fa fa-brands fa-instagram"></i> Instagram</li>
+                    <li class="footer__elementoListaRedes"><i class="fa fa-brands fa-tiktok"></i> Tiktok</li>
+                    <li class="footer__elementoListaRedes"><i class="fa fa-brands fa-facebook"></i> Facebook</li>
+                </ul>
+
+                <p class="footer__copyright"><i class="fa-regular fa-copyright"></i> 2024 Con Limón.</p>
+
+            </div>
+
+        </footer>
+
+    </body>
+
+</html>

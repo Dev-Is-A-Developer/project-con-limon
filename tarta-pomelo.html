@@ -1,0 +1,243 @@
+<!--
+TARTA
+Descripción: Este archivo HTML contiene la página de uno de los productos del sitio web.
+Estructura general: Encabezado con barra de navegación / versión responsive, contenido principal (main con 2 partes), pie de página
+-->
+
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+        <title>Tarta de Queso de Pomelo y Yogur de Coco - Con Limón</title>
+        <meta name="title" content="Tarta de Queso de Pomelo y Yogur de Coco - Con Limón">
+        <meta name="author" content="Devon García">
+        <meta name="description" content="Con Limón es una pastelería de tartas elaborado con sabor, vivacidad y sol para tu cuerpo y mente.">
+        <meta name="keywords" content="pasteleria, pasteleria cerca de mi, mejores pastelerias, reposteria, pasteles, tartas, tartas personalizadas">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="css/tarta.css">
+        <script src="script/tarta.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    </head>
+
+    <body>
+
+        <!--
+        HEADER RESPONSIVE
+        Descripción: Este header solo aparece en la versión responsive del web
+        -->
+        <nav class="headerResponsive" id="navegacion">
+        
+            <button type="button" class="headerResponsive__botonCierra" id="botonCierraCortina">&times;</button>
+            
+            <ul class="headerResponsive__lista">
+    
+                <li class="headerResponsive__elementoLista"><a href="index.html">Inicio</a></li>
+
+                <li class="headerResponsive__elementoLista"><a href="sobre.html">Nosotros</a></li>
+
+                <li class="headerResponsive__elementoLista"><a href="productos.html">Productos</a></li>
+
+                <li class="headerResponsive__elementoLista"><a href="comingsoon.html">Eventos</a></li>
+
+                <li class="headerResponsive__elementoLista"><a href="contacto.html">Contacto</a></li>
+
+                <li class="headerResponsive__elementoLista"><a href="carrito.html">Carrito</a></li>
+    
+            </ul>
+    
+        </nav>
+    
+        <!--
+        HEADER
+        Descripción: Este header es el encabezado con barra de navegación base del web
+        -->
+        <header class="header">
+
+            <!-- Logo -->
+            <h1 class="header__logo"><a href="index.html">con limón</a></h1>
+
+            <!-- Barra de navegación -->
+            <nav class="header__nav">
+
+                <ul class="header__lista">
+
+                    <li class="header__elementoLista"><a href="index.html">Inicio</a></li>
+
+                    <li class="header__elementoLista"><a href="sobre.html">Nosotros</a></li>
+
+                    <li class="header__elementoLista"><a href="productos.html">Productos</a></li>
+
+                    <li class="header__elementoLista"><a href="comingsoon.html">Eventos</a></li>
+
+                    <li class="header__elementoLista"><a href="contacto.html">Contacto</a></li>
+
+                    <li class="header__elementoLista"><a href="carrito.html">Carrito</a></li>
+
+                </ul>
+
+            </nav>
+
+            <!-- Boton de 3 barras de header responsive -->
+            <button type="button" class="header__responsiveButton" id="botonAbreCortina"><i class="fa-solid fa-bars"></i></button>
+            
+        </header>
+
+        <!--
+        MAIN
+        Descripción: El main contiene 2 secciones: producto (imagen, detalles, añadir al carrito) y ver más tartas
+        -->
+        <main>
+
+            <!--
+            SECCION PRODUCTO
+            Descripción: Seccion para mostrar el producto con detalles y la opcion de añadir al carrito de compras
+            -->
+            <section class="producto">
+
+                <!-- Contenedor para producto / contenido principal -->
+                <div class="producto__contenedor">
+
+                    <div class="producto__contenedorImage">
+                        <img class="producto__image" src="./images/tarta-pomelo.jpg" alt="Tarta de Queso de Pomelo y Yogur de Coco">
+                    </div>
+
+                    <div class="producto__contenedorTexto">
+
+                        <h2 class="producto__detallesNombre">Tarta de Queso de Pomelo y Yogur de Coco</h2>
+
+                        <h4 class="producto__detallesPrecio">18€</h4>
+
+                        <div class="producto__detallesCantidad">
+                            <p>Cantidad:</p>
+                            <input type="number" name="cantidad" value="1">
+                        </div>
+    
+                        <div class="producto__detallesAnadir">
+                            <button type="submit" id="add">Añadir al carrito</button>
+                        </div>
+
+                        <!-- Version Tabs -->
+                        <div class="producto__detallesTabs">
+
+                            <div class="contenedorBotones">
+                                <button type="button" id="primerBoton" value="0">Descripción</button>
+                                <button type="button" id="segundoBoton" value="1">Ingredientes</button>    
+                                <button type="button" id="tercerBoton" value="2">Ocasiones</button>
+                            </div>
+                        
+                            <div class="contenedorTabs">
+                                <p class="parrafoTabs">La combinación de pomelo rosa y yogur de coco es refrescante y ligera. Este postre es ideal para quienes prefieren un sabor ácido único y potente pero suave a la vez con una textura cremosa. Una tarta simple pero con un toque distinto.</p>
+                            </div>
+                        
+                            <div class="contenedorTabs">
+                                <p class="parrafoTabs">Harina de coco, avena molida, queso crema, yogur de coco natural, pomelo rosa, sirope de agave, aceite de coco, sal marina, vainilla natural, ralladura de limón.</p>
+                            </div>
+                        
+                            <div class="contenedorTabs">
+                                <p class="parrafoTabs">Ideal para almuerzos ligeros o reuniones informales. Acompaña con agua infusionada con pomelo y romero. Decora con flores blancas y frutas frescas de colores suaves y coloca una bandeja de granola y yogur para complementar los sabores.</p>
+                            </div>
+
+                        </div>
+
+                        <!-- Version Accordeon (Responsive) -->
+                        <div class="producto__detallesAccordeon">
+
+                            <button type="button" id="primerBotonAccordeon" value="0">Descripción +</button>
+                            <p class="parrafoAccordeon">La combinación de pomelo rosa y yogur de coco es refrescante y ligera. Este postre es ideal para quienes prefieren un sabor ácido único y potente pero suave a la vez con una textura cremosa. Una tarta simple pero con un toque distinto.</p>
+                            
+                            <button type="button" id="segundoBotonAccordeon" value="1">Ingredientes +</button>    
+                            <p class="parrafoAccordeon">Harina de coco, avena molida, queso crema, yogur de coco natural, pomelo rosa, sirope de agave, aceite de coco, sal marina, vainilla natural, ralladura de limón.</p>
+                            
+                            <button type="button" id="tercerBotonAccordeon" value="2">Ocasiones +</button>                            
+                            <p class="parrafoAccordeon">Ideal para almuerzos ligeros o reuniones informales. Acompaña con agua infusionada con pomelo y romero. Decora con flores blancas y frutas frescas de colores suaves y coloca una bandeja de granola y yogur para complementar los sabores.</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+    
+                <!-- Modal para confirmar que se ha añadido al carrito -->
+                <div class="modal" id="modal">
+                        
+                    <div class="modal__contenedor">
+
+                        <button type="button" name="botón cerrar" id="cer" class="modal__botonCerrar">x</button>
+                        <p class="modal__mensaje">Añadido al carrito</p>
+
+                    </div>
+
+                </div>
+
+            </section>
+           
+            <!--
+            SECCION VER TARTAS
+            Descripción: Seccion para redireccionar a la página de todos los productos
+            -->
+            <section class="verTartas">
+
+                <div class="verTartas__contenedor">
+                    <h4 class="verTartas__heading">¿Te interesa algo un poco diferente?</h4>
+                    <a class="verTartas__boton" href="productos.html">Ver Tartas</a>
+                </div>
+
+            </section>
+
+        </main>
+
+        <!--
+        FOOTER
+        Descripción: El footer está compuesto de dos partes:
+        1. Seccion arriba: la dirección, el correo electrónico, los enlaces del header, e información sobre la política y temas legales
+        2. Seccion abajo: copyright, redes sociales
+        -->
+        <footer class="footer">
+
+            <!-- Seccion de arriba -->
+            <div class="footer__seccionArriba">
+
+                    <ul class="footer__lista">
+                        <li class="footer__elementoLista">C/ Limonero 1, Sevilla</li>
+                        <li class="footer__elementoLista">info@conlimon.com</li>
+                    </ul>
+
+                    <ul class="footer__lista">
+                        <li class="footer__elementoLista elementoSlide"><a href="index.html">Inicio</a></li>
+                        <li class="footer__elementoLista elementoSlide"><a href="sobre.html">Nosotros</a></li>
+                        <li class="footer__elementoLista elementoSlide"><a href="productos.html">Productos</a></li>
+                        <li class="footer__elementoLista elementoSlide"><a href="contacto.html">Contacto</a></li>
+                    </ul>
+
+                    <ul class="footer__lista">
+                        <li class="footer__elementoLista elementoSlide"><a href="#">Términos y Condiciones</a></li>
+                        <li class="footer__elementoLista elementoSlide"><a href="#">Política de Privacidad</a></li>
+                        <li class="footer__elementoLista elementoSlide"><a href="#">Condiciones de Compra</a></li>
+                    </ul>
+
+            </div>
+
+            <!-- Barra para separar secciones -->
+            <div class="footer__linea"></div>
+
+            <!-- Seccion de abajo -->
+            <div class="footer__seccionAbajo">
+
+                <ul class="footer__listaRedes">
+                    <li class="footer__elementoListaRedes"><i class="fa fa-brands fa-instagram"></i> Instagram</li>
+                    <li class="footer__elementoListaRedes"><i class="fa fa-brands fa-tiktok"></i> Tiktok</li>
+                    <li class="footer__elementoListaRedes"><i class="fa fa-brands fa-facebook"></i> Facebook</li>
+                </ul>
+
+                <p class="footer__copyright"><i class="fa-regular fa-copyright"></i> 2024 Con Limón.</p>
+
+            </div>
+
+        </footer>
+        
+    </body>
+
+</html>

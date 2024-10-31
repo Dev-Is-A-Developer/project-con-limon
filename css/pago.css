@@ -1,0 +1,183 @@
+/* ---------------------------------
+PAGO CSS
+- Titulo y descripción
+- Main: pago de la compra, modal para confirmar pago
+--------------------------------- */
+
+/* titulo */
+.pago__titulo {
+    padding: 0.5rem 1.5rem;
+}
+
+/* descripción */
+.pago__descripcion {
+    padding: 0.5rem 1.5rem;
+}
+
+/* SECCION PAGO 
+Estilos para la seccion del pago de los productos en el carrito.
+Estructura:
+- contenedor
+- form inputs (nombre, apellidos, email, teléfono, tarjeta, complementos, comentarios, boton de submit
+*/
+
+/* SECCION PAGO contenedor */
+.pago__formulario {
+    border: none;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+/* SECCION PAGO contenedores input */
+.pago__formularioInput {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Necto;
+    margin: 0.5rem 0;
+}
+
+/* SECCION PAGO info de tarjeta */
+.tarjetaInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+/* SECCION PAGO inpur info de tarjeta */
+.tarjetaInfo input {
+    width: 2.5rem;
+}
+
+/* SECCION PAGO checkboxes (complementos) */
+.pago__checkboxes {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 1rem 0;
+}
+
+/* SECCION PAGO textarea (comentarios) */
+.pago__textarea {
+    margin: 0 0 1rem 0;
+    padding: 1rem;
+    border: solid var(--mediumYellow);
+    resize: none;
+}
+
+/* SECCION PAGO contenedor input */
+input {
+    font-family: Necto;
+    margin: 0 0 1rem 0;
+    padding: 1rem;
+    border: solid var(--mediumYellow);
+}
+
+/* SECCION PAGO boton confirmar */
+.pago__confirmar {
+    font-family: Necto;
+    width: 15rem;
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: var(--lightYellow);
+    border: solid var(--darkYellow);
+    border-radius: 0;
+    align-self: center;
+}
+
+.pago__confirmar:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+
+}
+
+/* Al estar menos de 480px la anchura, la seccion se cambia de formato: */
+@media screen and (max-width: 480px) {
+
+    .seccionContacto__formulario {
+        margin: 0.25rem;
+    }
+
+    .seccionContacto__formularioInput {
+        font-size: 0.9rem;
+    }
+
+}
+
+
+/* MODAL 
+Estilos para el modal de confirmar el pago de los productos en el carrito.
+Estructura:
+- contenedor modal (página)
+- contenedor modal (modal en si)
+- mensaje
+- botones
+*/
+
+/* MODAL contenedor página */
+.pago__modal {
+    display: none; /* escondido por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2); /* fondo semi-transparente */
+    color: var(--white); /* texto */
+    text-align: center;
+}
+
+/* MODAL contenedor modal */
+.pago__contenedorModal {
+    max-width: 300px;
+    background-color: var(--darkYellow);
+    padding: 4rem;
+    border-radius: 10px;
+    margin: auto;
+}
+
+/* MODAL mensaje */
+.pago__contenedorMensaje {
+    text-align: center;
+}
+
+/* MODAL boton */
+.pago__boton {
+    text-decoration: none;
+    margin: 2rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    font-family: "Necto";
+    color: var(--darkYellow);
+    background-color: var(--white);
+    font-size: 1.5rem;
+    transition: background-color 0.5s;
+}
+
+.pago__boton:hover {
+    cursor: pointer;
+    background-color: var(--lightYellow);
+}
+
+/* Al estar menos de 480px la anchura, el modal se cambia de formato: */
+@media screen and (max-width: 480px) {
+    .pago__contenedorModal {
+        font-size: small;
+        margin: 1.5rem;
+        padding: 2.5rem;
+    }
+
+    .pago__boton {
+        margin: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .pago__checkboxesBox {
+        font-size: small;
+    }
+}
+
